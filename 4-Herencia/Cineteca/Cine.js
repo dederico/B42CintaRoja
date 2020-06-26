@@ -9,7 +9,7 @@
 // const a = pbjeto.a;
 
 // const { letra, caballo } = ojeto;
-
+const { Largometraje } = require("./Largometraje");
 class Cine {
   constructor(cadena, nombre, ciudad, ubicacion, capacidad) {
     this.cadena = cadena;
@@ -18,13 +18,12 @@ class Cine {
     this.ubicacion = ubicacion;
     this.capacidad = capacidad;
   }
-  reproducir()
-};
-
-class Cineteca {
-  constructor() {}
+  reproducir(largometraje) {
+    const { titulo } = largometraje;
+    return `Reproduciendo ${titulo} en tu cine favorito`;
+  }
 }
+
 module.exports = {
   Cine,
-  Cineteca,
 };

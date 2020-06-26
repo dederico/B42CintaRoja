@@ -11,11 +11,11 @@ module.exports = {
   Largometraje,
 };
 // Crear un largometraje
-const largometraje1 = new Largometraje(
-  "Pedro y el Lobo",
-  "PG-13",
-  80,
-  "Inglaterra"
-);
+// const largometraje1 = new Largometraje(
+//   "Pedro y el Lobo",
+//   "PG-13",
+//   80,
+//   "Inglaterra"
+// );
 //imprime el largometraje
-console.log(largometraje1);
+// console.log(largometraje1);

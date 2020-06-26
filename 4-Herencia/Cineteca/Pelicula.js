@@ -9,26 +9,33 @@ class Pelicula extends Largometraje {
   }
   // metodo de getReproducir para poder reproducir los largometrajes
   //(Se que no va aqui, se que va en index, pero quiero resolver esa parte de una vez)
-  getReproducir() {
-    const reproducir = () => {
-      reproducir = this.titulo.largometrajePelicula;
-      return console.log(
-        `Hola, Bienvenido a ${this.titulo}, estaras aca ${this.duracion} ya visitaste la dulceria?`
-      );
-    };
-    // creo una nueva pelicula
-    const largometrajePelicula = new Pelicula(
-      "Mi primer pelicula",
-      "A",
-      98,
-      "Mexico",
-      "existe",
-      "dipsonible"
+  intermedio() {
+    console.log(
+      "Gracias por preferirnos, si desea comprar algun producto puede pasar a dulceria, ir al banio, en este intermedio de 10 minutos"
     );
-    getReproducir(largometrajePelicula);
-    console.log(getReproducir());
+    this.intermedio();
   }
 }
+// getReproducir() {
+//   const reproducir = () => {
+//     reproducir = this.titulo.largometrajePelicula;
+//     return console.log(
+//       `Hola, Bienvenido a ${this.titulo}, estaras aca ${this.duracion} ya visitaste la dulceria?`
+//     );
+//   };
+// creo una nueva pelicula
+//     const largometrajePelicula = new Pelicula(
+//       "Mi primer pelicula",
+//       "A",
+//       98,
+//       "Mexico",
+//       "existe",
+//       "dipsonible"
+//     );
+//     getReproducir(largometrajePelicula);
+//     console.log(getReproducir());
+//   }
+// }
 
 // console.log(largometrajePelicula);
 module.exports = {

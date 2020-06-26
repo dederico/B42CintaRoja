@@ -9,7 +9,11 @@ class Documental extends Largometraje {
     this.resenia = resenia;
     this.cortometraje = cortometraje;
   }
+  getClasificacion() {
+    return this.clasificacion;
+  }
 }
 // Creo un nuevo documental con las caracteristicas del Largometraje y le doy valor de true a resenia y cortometraje
-const documental1 = new Documental("A", 98, "Mexico", true, true);
-console.log(documental1);
+module.exports = {
+  Documental,
+};
