@@ -9,6 +9,7 @@ const cinemex = new Cine(
   "Avenida Paseo De La Reforma",
   "500 personas"
 );
+console.log(`Bienvenidos a ${this.cinemex} gracias por visitarnos`);
 // reproducir el documental de Cosmos
 // reproducir
 // cinemex.reproducir(documental);
