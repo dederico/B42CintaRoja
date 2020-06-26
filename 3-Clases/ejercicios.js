@@ -22,7 +22,7 @@ class Persona {
     // getAge()
   }
   getIMC() {
-    return this.peso / this.altura;
+    return (this.peso / this.altura) * this.altura;
   }
   getEsMayorDeEdad() {
     if (this.edad >= 18) {
@@ -66,18 +66,29 @@ class Cuenta {
   //     let Ingresar = this.cantidad + cantidadAIngresar;
 
   getIngresar(ingreso) {
-    return this.cantidad + ingreso;
+    if (this.cantidad + ingreso > 900) {
+      console.log(`No puedes ingresar, tu cuenta tiene ${this.cantidad}`);
+      return this.cantidad;
+    }
+    this.cantidad = this.cantidad + ingreso;
+
+    return this.cantidad;
   }
   getRetirar(retiro) {
-    return this.cantidad - retiro;
+    if (this.cantidad - retiro < 10) {
+      console.log(`No puedes reitrar, tu cuenta tiene ${this.cantidad}`);
+      return this.cantidad;
+    }
+    this.cantidad = this.cantidad - retiro;
+    return this.cantidad;
   }
 }
 
-const CuentaAfirme = new Cuenta("Federico Gonzalez", 900, "activa");
+const cuentaAfirme = new Cuenta("Federico Gonzalez", 800, "activa");
 
-console.log(CuentaAfirme);
-console.log(CuentaAfirme.getIngresar(20));
+console.log(cuentaAfirme);
+console.log(cuentaAfirme.getIngresar(20));
 // QUISIERA SABER COMO HACERLE PARA QUE SE 'GUARDE' LA NUEVA CANTIDAD
-CuentaAfirme.getIngresar(20);
-console.log(CuentaAfirme);
-console.log(CuentaAfirme.getRetirar(20));
+cuentaAfirme.getIngresar(20);
+console.log(cuentaAfirme);
+console.log(cuentaAfirme.getRetirar(20));

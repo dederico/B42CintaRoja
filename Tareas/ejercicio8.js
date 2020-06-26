@@ -32,22 +32,89 @@
 // }
 // getMax(13423413513242);
 
-frequent();
-function frequent() {
-  const frequente = [3, 2, 3, 3, 2, 4, 9, 3];
-  let mf = 1;
-  let m = 0;
-  let item;
-  for (let i = 0; i < frequente.length; i++) {
-    for (let j = i; j < frequente.length; j++) {
-      if (frequente[i] == frequente[j]) m++;
-      if (mf < m) {
-        mf = m;
-        item = frequente[i];
+// frequent();
+// function frequent() {
+//   const frequente = [3, 2, 3, 3, 2, 4, 9, 3];
+//   let mf = 1;
+//   let m = 0;
+//   let item;
+//   for (let i = 0; i < frequente.length; i++) {
+//     for (let j = i; j < frequente.length; j++) {
+//       if (frequente[i] == frequente[j]) m++;
+//       if (mf < m) {
+//         mf = m;
+//         item = frequente[i];
+//       }
+//     }
+//     m = 0;
+//     console.log(`${item} ( ${mf} times) `);
+//   }
+//   return frequente; //console.log(`${item} ( ${mf} times ) `);
+// }
+
+// const frequent = () => {
+//   let arreglo = [];
+// };
+// console.log(frequent);
+
+// pseudocodigo
+
+//inicializar variables
+let arreglo = [
+  3,
+  4,
+  2,
+  6,
+  7,
+  8,
+  3,
+  4,
+  5,
+  3,
+  4,
+  3,
+  3,
+  2,
+  1,
+  2,
+  3,
+  3,
+  9,
+  2,
+  2,
+  2,
+  9,
+  2,
+  2,
+]; // arreglo es igual a un arreglo de numeros
+
+// funcion que se llame frequent
+function frequent1(arreglo) {
+  var counter = 0; // en la primer vuelta counter es 7
+  var currCounter = 0; // en la segunda vuelta currCounter es 4
+  var itemwithmaxFreq;
+  // tomamos el tercer número, 2
+  arreglo.forEach((item) => {
+    // item = 2
+    arreglo.forEach((item2) => {
+      // item2 = 3
+      if (item === item2) {
+        // cada que el numero aparece, aumentamos el curr counter
+        currCounter++;
       }
+    });
+    //
+    if (currCounter >= counter) {
+      // si currCounter supera a counter (número almacenado)
+      // significa que ese número fue mayor que el pasado
+      // guardamos ese númeroen variable itemwithmaxFreq
+      itemwithmaxFreq = item;
+      // counter es el nuevo número a superarse, lo actualizamos
+      counter = currCounter;
     }
-    m = 0;
-    console.log(`${item} ( ${mf} times) `);
-  }
-  return frequente; //console.log(`${item} ( ${mf} times ) `);
+    // reiniciamos la variable para volver a analizar el sig número
+    currCounter = 0;
+  });
+  console.log(itemwithmaxFreq);
 }
+frequent1(arreglo);
