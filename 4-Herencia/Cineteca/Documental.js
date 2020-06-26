@@ -7,5 +7,5 @@ class Documental extends Largometraje {
     this.cortometraje = cortometraje;
   }
 }
-const documental1 = new Largometraje("A", 98, "Mexico", true, true);
+const documental1 = new Documental("A", 98, "Mexico", true, true);
 console.log(documental1);

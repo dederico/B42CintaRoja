@@ -18,6 +18,7 @@ class Cine {
     this.ubicacion = ubicacion;
     this.capacidad = capacidad;
   }
+    reproducir()
 }
 
 class Cineteca {

@@ -12,9 +12,14 @@ class Pelicula extends Largometraje {
   }
 }
 
-const pelicula1 = new Largometraje("A", 98, "Mexico", true, true);
-console.log(pelicula1);
-
-module.exports {
-    Pelicula
+const largometrajePelicula = new Pelicula(
+  "A",
+  98,
+  "Mexico",
+  "existe",
+  "dipsonible"
+);
+console.log(largometrajePelicula);
+module.exports = {
+  Pelicula,
 };

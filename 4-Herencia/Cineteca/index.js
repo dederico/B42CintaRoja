@@ -13,4 +13,5 @@ const cinemex = new Cine(
 // reproducir
 // cinemex.reproducir(documental);
 // reproducir su pelicula favorita
+
 console.log(cinemex);
