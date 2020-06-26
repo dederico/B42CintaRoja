@@ -7,10 +7,14 @@ class Pelicula extends Largometraje {
     this.resenia = resenia;
     this.cortometraje = cortometraje;
   }
-  respirar() {
+  comerciales() {
     console.log();
   }
 }
 
 const pelicula1 = new Largometraje("A", 98, "Mexico", true, true);
 console.log(pelicula1);
+
+module.exports {
+    Pelicula
+};
