@@ -77,45 +77,70 @@
 // };
 // cleanArray(array);
 
-var array = [1, 1, 1, 9, 3, null, 0];
-console.log(array);
-const cleanArray = () => {
-  array.forEach((elem, index) => {
-    switch (elem) {
-      case null:
-        array.indexOf(index) === null;
-        console.log(
-          "found element to remove, hay un elemento igual a null" +
-            array.splice(index, 1)
-        );
-      // break;
-      case 0:
-        array.indexOf(index) === 0;
-        console.log(
-          "found element to remove, hay un elemento igual a 0" +
-            array.splice(index, 1)
-        );
-      // break;
-      case false:
-        array.indexOf(index) === false;
-        console.log(
-          "found element to remove, hay un elemento igual a false" +
-            array.splice(index, 1)
-        );
-        break;
-      case undefined:
-        elem === undefined;
-        console.log(
-          "found element to remove, hay un elemento igual a undefined" +
-            array.splice(index, 1)
-        );
-        break;
+// var array = [1, 1, 1, 9, 3, null, 0];
+// console.log(array);
+// const cleanArray = (array) => {
+//   const arregloFiltrado = array.filter((elem) => {
+//     const resultado =
+//       elem !== 0 &&
+//       elem !== null &&
+//       elem !== false &&
+//       elem !== "" &&
+//       elem !== undefined;
+//     return resultado;
+//   });
+//   return arregloFiltrado;
+// };
 
-      default:
-        console.log("not found any 0, null, undefined, or false values");
-        break;
-    }
+const cleanArray = (array) => {
+  const arregloFiltrado = array.filter((elem) => {
+    const resultado =
+      elem !== 0 &&
+      elem !== null &&
+      elem !== false &&
+      elem !== "" &&
+      elem !== undefined;
+    return resultado;
   });
-  console.log(array);
+  return arregloFiltrado;
 };
-cleanArray(array);
+
+//     switch (elem) {
+//       case null:
+//         array.indexOf(index) === null;
+//         console.log(
+//           "found element to remove, hay un elemento igual a null" +
+//             array.splice(index, 1)
+//         );
+//       // break;
+//       case 0:
+//         array.indexOf(index) === 0;
+//         console.log(
+//           "found element to remove, hay un elemento igual a 0" +
+//             array.splice(index, 1)
+//         );
+//       // break;
+//       case false:
+//         array.indexOf(index) === false;
+//         console.log(
+//           "found element to remove, hay un elemento igual a false" +
+//             array.splice(index, 1)
+//         );
+//         break;
+//       case undefined:
+//         elem === undefined;
+//         console.log(
+//           "found element to remove, hay un elemento igual a undefined" +
+//             array.splice(index, 1)
+//         );
+//         break;
+
+//       default:
+//         console.log("not found any 0, null, undefined, or false values");
+//         break;
+//     }
+//   });
+//   return array;
+// };
+
+console.log(cleanArray(array));
